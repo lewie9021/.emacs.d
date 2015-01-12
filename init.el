@@ -54,7 +54,6 @@
 (setq fci-rule-width 1)
 
 ;; Override standard undo system with undo-tree
-;; (require 'undo-tree)
 (global-undo-tree-mode)
 
 (setq js2-highlight-level 3)
@@ -69,6 +68,11 @@
 
 ;; Binding for expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+;; Bindings for multiple cursors.
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-*") 'mc/mark-all-like-this)
 
 ;; Load themes
 (dolist (f '("brogrammer"))
