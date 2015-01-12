@@ -68,6 +68,7 @@
 
 ;; Binding for expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-+") 'er/contract-region)
 
 ;; Bindings for multiple cursors.
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
