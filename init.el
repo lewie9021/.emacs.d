@@ -10,7 +10,14 @@
 ;; Remove toolbar.
 (tool-bar-mode 0)
 
+;; Auto saves sessions open using a save-timeout setting.
 (desktop-save-mode 1)
+
+;; Take advantage of the a better file finding interface.
+(ido-mode t)
+
+;; Change the cursor to bar rather than the default block.
+(setq-default cursor-type 'bar)
 
 ;; The default desktop is saved always
 (setq desktop-save t)
