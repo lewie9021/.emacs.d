@@ -70,10 +70,10 @@
 (global-set-key (kbd "C-x C-;") 'comment-region)
 (global-set-key (kbd "C-x C-:") 'uncomment-region)
 
-;; Binding for toggling idle-highlight-mode
+;; Binding for toggling idle-highlight-mode.
 (global-set-key (kbd "C-x C-.") 'idle-highlight-mode)
 
-;; Binding for expand-region
+;; Bindings for expand-region.
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-+") 'er/contract-region)
 
@@ -81,6 +81,27 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-*") 'mc/mark-all-like-this)
+
+;; Binding for opening a new shell.
+(defun create-shell()
+    "creates a shell with a given name"
+    (interactive);; "Prompt\n shell name:")
+    (let ((shell-name (read-string "Shell name: " nil)))
+    (shell (concat "*shell-" shell-name "*"))))
+(global-set-key (kbd "C-x t") 'create-shell)
+
+;; Binding for switching to the mini-buffer.
+(defun switch-to-minibuffer ()
+  "Switch to minibuffer window."
+  (interactive)
+  (if (active-minibuffer-window)
+      (select-window (active-minibuffer-window))
+    (error "Minibuffer is not active")))
+(global-set-key (kbd "C-c o") 'switch-to-minibuffer)
+
+;; Make use of the Aspell spell checker (http://aspell.net/win32/).
+(add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
+(setq ispell-program-name "aspell")
 
 ;; Load themes
 (dolist (f '("brogrammer"))
