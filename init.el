@@ -19,6 +19,10 @@
 ;; Change the cursor to bar rather than the default block.
 (setq-default cursor-type 'bar)
 
+;; Disable the messages buffer.
+(setq-default message-log-max nil)
+(kill-buffer "*Messages*")
+
 ;; The default desktop is saved always
 (setq desktop-save t)
 
