@@ -14,6 +14,14 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-*") 'mc/mark-all-like-this)
 
+;; Binding for editing the config.
+(global-set-key
+(kbd "<f12>")
+    (lambda ()
+    (interactive)
+    (find-file "~/.emacs.d/init.el")))
+
+
 ;; Binding for opening a new shell.
 (defun open-shell()
   "creates a shell with a given name"
