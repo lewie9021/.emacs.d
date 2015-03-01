@@ -68,16 +68,22 @@
     '(whitespace-trailing ((t (:background "#30312a"))))
 
     '(border ((t (:background "#2a2a2a" ))))
+
     '(css-property ((t (:foreground "#3498db" ))))
     '(css-proprietary-property ((t (:foreground "#3498db" ))))
     '(css-selector ((t (:foreground "#2ecc71" ))))
+
     '(cursor ((t (:background "#ecf0f1" ))))
     '(default ((t (:foreground "#ecf0f1" :background "#1a1a1a" ))))
-    '(diff-added ((t (:foreground "#f8f8f8" :background "#f1c40f" ))))
-    '(diff-changed ((t (:foreground "#f8f8f8" :background "#e67e22" ))))
-    '(diff-header ((t (:foreground "#f8f8f8" :italic t :background "#2ecc71" ))))
-    '(diff-hunk-header ((t (:foreground "#f8f8f8" :italic t :background "#2ecc71" ))))
-    '(diff-removed ((t (:foreground "#f8f8f8" :background "#e74c3c" ))))
+
+    '(diff-context ((t (:foreground "#606060" :background "#1a1a1a" )))) ;; f8f8f8, f1c40f
+    '(diff-added ((t (:foreground "#f1c40f" :background "#1a1a1a" )))) ;; f8f8f8, f1c40f
+    '(diff-changed ((t (:foreground "#e67e22" :background "#1a1a1a" )))) ;; f8f8f8, e67e22
+    '(diff-header ((t (:foreground "#f8f8f8" :italic t :background "#1a1a1a" )))) ;; f8f8f8, 2ecc71
+    '(diff-file-header ((t (:background "#1a1a1a" ))))
+    '(diff-hunk-header ((t (:foreground "#2ecc71" :italic t :background "#1a1a1a" )))) ;; f8f8f8, 2ecc71
+    '(diff-removed ((t (:foreground "#e74c3c" :background "#1a1a1a" )))) ;; f8f8f8, e74c3c
+
     '(font-lock-builtin-face ((t (:foreground "#3498db" ))))
     '(font-lock-comment-delimiter-face ((t (:foreground "#606060" :italic t ))))
     '(font-lock-comment-face ((t (:foreground "#606060" :italic t ))))
@@ -92,24 +98,30 @@
     '(font-lock-type-face ((t (:foreground "#3498db" ))))
     '(font-lock-variable-name-face ((t (:foreground "#e67e22" ))))
     '(font-lock-warning-face ((t (:foreground "#ffffff" :background "#e74c3c" ))))
+
     '(fringe ((t (:background "#2a2a2a" ))))
     '(highlight ((t (:background "#2a2a2a" ))))
     '(hl-line ((t (:background "#2a2a2a" ))))
+
     '(isearch ((t (:foreground "#f8f8f8" :background "#e67e22" ))))
     '(isearch-fail ((t (:foreground "#f8f8f8" :background "#e74c3c" ))))
+
     '(iswitchb-current-match ((t (:foreground "#f8f8f8" :background "#f1c40f" ))))
     '(iswitchb-invalid-regexp ((t (:foreground "#f8f8f8" :background "#e74c3c" ))))
     '(iswitchb-single-match ((t (:foreground "#f8f8f8" :background "#f1c40f" ))))
     '(iswitchb-virtual-matches ((t (:foreground "#f8f8f8" :background "#e67e22" ))))
+
     '(linum ((t (:background "#2a2a2a" ))))
     '(match ((t (:foreground "#f8f8f8" :background "#f1c40f" ))))
     '(menu ((t (:foreground "#ecf0f1" :background "#1a1a1a" ))))
     '(minibuffer-prompt ((t (:foreground "#e74c3c" ))))
+
     '(mode-line ((t (:background "#2a2a2a" :foreground "#ecf0f1"))))
     '(mode-line-buffer-id ((t (:foreground "#2ecc71" ))))
     '(mode-line-emphasis ((t (:bold t ))))
     '(mode-line-highlight ((t (:italic t ))))
     '(mode-line-inactive ((t (:background "#2a2a2a" ))))
+
     '(org-agenda-dimmed-todo-face ((t (:foreground "#606060" :italic t ))))
     '(org-column ((t (:background "#2a2a2a" ))))
     '(org-column-title ((t (:background "#2a2a2a" ))))
@@ -118,8 +130,10 @@
     '(org-todo ((t (:foreground "#ffffff" :background "#e74c3c" ))))
     '(org-upcoming-deadline ((t (:foreground "#ffffff" :background "#e74c3c" ))))
     '(org-warning ((t (:foreground "#ffffff" :background "#e74c3c" ))))
+    
     '(region ((t (:background "#2a2a2a" ))))
     '(secondary-selection ((t (:background "#2a2a2a" ))))
+
     '(show-paren-match-face ((t (:background "#2a2a2a" ))))
     '(show-paren-mismatch-face ((t (:foreground "#ffffff" :background "#e74c3c" ))))
 )

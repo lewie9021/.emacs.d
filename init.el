@@ -39,7 +39,7 @@
 ;; Prevents new buffers when in Dired.
 (put 'dired-find-alternate-file 'disabled nil)
 
-;; Save the state of Emacs from one session to anothe
+;; Save the state of Emacs from one session to another.
 (desktop-save-mode t)
 
 ;; Display column numbers.
@@ -67,27 +67,23 @@
 ;; Override standard undo system with undo-tree
 (global-undo-tree-mode)
 
-(setq js2-highlight-level 3)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
 ;; Make use of the Aspell spell checker (http://aspell.net/win32/).
 (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
 (setq ispell-program-name "aspell")
 
 ;; Load themes
-(dolist (f '("brogrammer"))
-  (load-file (concat "~/.emacs.d/themes/" f ".el")))
+(load-file "~/.emacs.d/themes/brogrammer.el")
 
 ;; Load manual packages.
 (dolist (f '("indent-guide"))
   (load-file (concat "~/.emacs.d/packages/" f ".el")))
 
 ;; Load partial configuration files.
-(dolist (f '("backups" "recent-files" "bindings"))
+(dolist (f '("backups" "recent-files" "bindings" "misc"))
   (load-file (concat "~/.emacs.d/elisp/" f ".el")))
 
 ;; Load profile modes.
-(dolist (f '("html"))
+(dolist (f '("css" "html" "js2"))
   (load-file (concat "~/.emacs.d/profiles/" f ".el")))
 
 ;; Automatically save place in files.
@@ -110,12 +106,21 @@
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
 
-;; Enable projectile  globally.
-(projectile-global-mode)
+;; Enable command frequency tracking.
+(keyfreq-mode 1)
+
+;; Enable nyan mode 'cause why not?
+(nyan-mode 1)
 
 ;; Configure indent-guide.
 (indent-guide-global-mode)
 (set-face-foreground 'indent-guide-face "dimgray")
 (setq indent-guide-char ":")
+
+;; Enable recent files mode.
+(recentf-mode t)
+
+; Track only up to 15 files.
+(setq recentf-max-saved-items 15)
 
 (message "Loaded init file successfully!")
