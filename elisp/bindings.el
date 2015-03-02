@@ -82,3 +82,11 @@
   (interactive)
   (find-file (ido-completing-read "Find recent file: " recentf-list)))
 (global-set-key (kbd "C-x f") 'ido-recentf-open)
+
+(defun beginning-of-line-or-indentation ()
+  "Move to beginning of line or indentation"
+  (interactive)
+  (if (bolp)
+      (back-to-indentation)
+    (beginning-of-line)))
+(global-set-key (kbd "C-a") 'beginning-of-line-or-indentation)
