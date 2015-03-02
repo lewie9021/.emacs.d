@@ -28,9 +28,6 @@
 (global-set-key (kbd "<mouse-8>") 'previous-buffer)
 (global-set-key (kbd "<mouse-9>") 'next-buffer)
 
-;; Binding for visualising undo tree.
-(global-set-key (kbd "<f6>") 'undo-tree-visualize)
-
 ;; Binding for editing the config.
 (global-set-key
  (kbd "<f12>")
