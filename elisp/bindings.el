@@ -10,8 +10,8 @@
 (global-set-key (kbd "C-+") 'er/contract-region)
 
 ;; Bindings for multiple cursors.
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C--") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-_") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-*") 'mc/mark-all-like-this)
 
 ;; Binding for smex (M-x enhancement).
@@ -90,3 +90,22 @@
       (back-to-indentation)
     (beginning-of-line)))
 (global-set-key (kbd "C-a") 'beginning-of-line-or-indentation)
+
+;; Define boundary characters to search for within the buffer.
+(defvar boundaries nil "list of boundary chars.")
+(setq boundaries '("(" "{" "[" "<" "“" "'" ")" "]" "}" ">" "”"))
+
+;; Search backwards for the boundaries defined above.
+(defun backward-boundary ()
+  "Move cursor to the previous boundary occurrence."
+  (interactive)
+  (search-backward-regexp (eval-when-compile (regexp-opt boundaries)) nil t))
+
+;; Search forwards for the boundaries defined above.
+(defun forward-boundary ()
+  "Move cursor to the next boundary occurrence."
+  (interactive)
+  (search-forward-regexp (eval-when-compile (regexp-opt boundaries)) nil t))
+
+(global-set-key (kbd "C-,") 'backward-boundary)
+(global-set-key (kbd "C-.") 'forward-boundary)
