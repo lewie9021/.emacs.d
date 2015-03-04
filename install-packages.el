@@ -41,5 +41,6 @@
 
 (dolist (p '(keyfreq
 	     nyan-mode
+             annoying-arrows-mode
 	     rainbow-mode)
 )(package-install p))

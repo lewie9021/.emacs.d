@@ -123,4 +123,8 @@
 ; Track only up to 15 files.
 (setq recentf-max-saved-items 15)
 
+(global-annoying-arrows-mode)
+
+(set-default 'truncate-lines t)
+
 (message "Loaded init file successfully!")

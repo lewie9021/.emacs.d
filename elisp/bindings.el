@@ -109,3 +109,45 @@
 
 (global-set-key (kbd "C-,") 'backward-boundary)
 (global-set-key (kbd "C-.") 'forward-boundary)
+
+(defun delete-this-buffer-and-file ()
+  "Removes file connected to current buffer and kills buffer."
+  (interactive)
+  (let ((filename (buffer-file-name))
+        (buffer (current-buffer))
+        (name (buffer-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (error "Buffer '%s' is not visiting a file!" name)
+      (when (yes-or-no-p "Are you sure you want to remove this file? ")
+        (delete-file filename)
+        (kill-buffer buffer)
+        (message "File '%s' successfully removed" filename)))))
+(global-set-key (kbd "C-x M-k") 'delete-this-buffer-and-file)
+
+(global-set-key
+ (kbd "<next>")
+ (lambda ()
+   "Scrolls buffer view up 5 characters."
+   (interactive)
+   (scroll-up-command 5)))
+
+(global-set-key
+ (kbd "<prior>")
+ (lambda ()
+   "Scrolls buffer view down 5 characters."
+   (interactive)
+   (scroll-down-command 5)))
+
+(global-set-key
+ (kbd "<C-next>")
+ (lambda ()
+   "Scrolls buffer view left 5 characters."
+   (interactive)
+   (scroll-left 5 t)))
+
+(global-set-key
+ (kbd "<C-prior>")
+ (lambda ()
+   "Scrolls buffer view right 5 characters."
+   (interactive)
+   (scroll-right 5 t)))

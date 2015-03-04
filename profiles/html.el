@@ -10,15 +10,11 @@
 (setq web-mode-css-indent-offset 4)
 (setq web-mode-code-indent-offset 4)
 
-(setq web-mode-enable-auto-expanding t)
-(setq web-mode-extra-expanders
-      `(("m/" . "<moo>|</moo>")
-        ("z/" . "<zebra>|</zebra>")))
+;; Disabled as it gets in the way of the region highlight colour.
+;; (setq web-mode-enable-current-element-highlight t)
 
-(setq web-mode-enable-current-element-highlight t)
+;; Binding for expanding Emmet snippets using tab.
+(add-hook 'web-mode-hook 'emmet-mode)
 
-;; Binding for expanding Emmet snippet using tab.
-(add-hook 'web-mode-hook (lambda ()
-                           (emmet-mode t)
-                           (local-set-key (kbd "TAB") 'emmet-expand-line)
-                           ))
+;; Added additional expansion helpers for html-mode (expand-region).
+(require 'html-mode-expansions)
