@@ -93,7 +93,7 @@
 
 ;; Define boundary characters to search for within the buffer.
 (defvar boundaries nil "list of boundary chars.")
-(setq boundaries '("(" "{" "[" "<" "“" "'" ")" "]" "}" ">" "”"))
+(setq boundaries '("(" "{" "[" "<" "\"" "'" ")" "]" "}" ">" "”"))
 
 ;; Search backwards for the boundaries defined above.
 (defun backward-boundary ()

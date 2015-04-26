@@ -83,7 +83,7 @@
   (load-file (concat "~/.emacs.d/elisp/" f ".el")))
 
 ;; Load profile modes.
-(dolist (f '("css" "html" "js2"))
+(dolist (f '("css" "html" "js2" "jsx" "coffee"))
   (load-file (concat "~/.emacs.d/profiles/" f ".el")))
 
 ;; Automatically save place in files.
