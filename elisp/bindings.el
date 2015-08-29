@@ -21,6 +21,9 @@
 ;; Clear the whole line (c-x of Sublime Text).
 (global-set-key (kbd "C-l") 'kill-whole-line)
 
+;; Show a list of recently killed text.
+(global-set-key (kbd "M-y") 'browse-kill-ring)
+
 ;; Binding for recursively searching within a directory.
 (global-set-key (kbd "C-x g") 'rgrep)
 

@@ -15,6 +15,7 @@
 ;; emmet-mode - CSS-style markup constructor.
 ;; yasnippet - Template system for creating snippets.
 ;; smex - M-x enhancement (similar to ido-mode works)
+;; browse-kill-ring - List recently killed text.
 ;; undo-tree - Provides functionality for recovering any past state of a buffer.
 ;; auto-complete - An intelligent auto-completion extension with #popup menu.
 ;; idle-highlight-mode - Sets an idle timer that highlights all occurences in the buffer of the word under the point.
