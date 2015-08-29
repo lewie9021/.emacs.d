@@ -29,6 +29,7 @@
              emmet-mode
              yasnippet
              smex
+             browse-kill-ring
              undo-tree
              auto-complete
              idle-highlight-mode)
