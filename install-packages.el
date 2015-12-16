@@ -4,8 +4,9 @@
 (package-refresh-contents)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 ;; Useful packages:
-;; coffee-mode - Provides syntax highlighting, indentation support, imenu support, a menu bar for coffee script.
+;; coffee-mode - Provides syntax highlighting, indentation support, imenu support, a menu bar for CoffeeScript.
 ;; expand-region - Increases the selected region by semantic units.
 ;; js2-mode - Improved JavaScript editing mode.
 ;; multiple-cursors - Provides support for multiple cursors.
@@ -13,8 +14,7 @@
 ;; scss-mode - Mode for editing SCSS files in Emacs.
 ;; web-mode - Autonomous mode for editing web templates.
 ;; emmet-mode - CSS-style markup constructor.
-;; yasnippet - Template system for creating snippets.
-;; smex - M-x enhancement (similar to ido-mode works)
+;; smex - M-x enhancement (similar to how ido-mode works).
 ;; undo-tree - Provides functionality for recovering any past state of a buffer.
 ;; auto-complete - An intelligent auto-completion extension with #popup menu.
 ;; idle-highlight-mode - Sets an idle timer that highlights all occurences in the buffer of the word under the point.
@@ -27,7 +27,6 @@
              scss-mode
              web-mode
              emmet-mode
-             yasnippet
              smex
              undo-tree
              auto-complete
@@ -35,12 +34,10 @@
 )(package-install p))
 
 ;; Misc packages:
-;; keyfreq - Monitors how many times you used a command.
 ;; nyan-mode - Renders an analog indicator of your position in the buffer.
 ;; rainbow-mode - Colorize color names in the buffer.
 
-(dolist (p '(keyfreq
-	     nyan-mode
+(dolist (p '(nyan-mode
              annoying-arrows-mode
 	     rainbow-mode)
 )(package-install p))

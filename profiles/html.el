@@ -10,9 +10,6 @@
 (setq web-mode-css-indent-offset 4)
 (setq web-mode-code-indent-offset 4)
 
-;; Disabled as it gets in the way of the region highlight colour.
-;; (setq web-mode-enable-current-element-highlight t)
-
 ;; Binding for expanding Emmet snippets using tab.
 (add-hook 'web-mode-hook 'emmet-mode)
 

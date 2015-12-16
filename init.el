@@ -5,7 +5,6 @@
 
 ;; Identify yourself.
 (setq user-full-name "Lewis Barnes")
-(setq user-mail-address "lewis@theconnectgroup.net")
 
 ;; Remove toolbar.
 (tool-bar-mode 0)
@@ -71,7 +70,7 @@
 (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
 (setq ispell-program-name "aspell")
 
-;; Load themes
+;; Use the Brogrammer inspired theme.
 (load-file "~/.emacs.d/themes/brogrammer.el")
 
 ;; Load manual packages.
@@ -90,9 +89,6 @@
 (setq save-place t)
 (toggle-save-place-globally 1)
 
-;; Enable yasnippet globally.
-(yas-global-mode 1)
-
 ;; Allow custom dictionaries in ac-dict directory.
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
@@ -100,14 +96,11 @@
 ;; Use default auto-complete configuration.
 (ac-config-default)
 
-;; set the trigger key so that it can work together with yasnippet on tab key,
+;; Set the trigger key so that it can work together with yasnippet on tab key,
 ;; if the word exists in yasnippet, pressing tab will cause yasnippet to
 ;; activate, otherwise, auto-complete will.
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
-
-;; Enable command frequency tracking.
-(keyfreq-mode 1)
 
 ;; Enable nyan mode 'cause why not?
 (nyan-mode 1)

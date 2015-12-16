@@ -46,7 +46,7 @@
    (untabify (point-min) (point-max))))
 
 ;; Binding for opening a new shell. Overwrites the annoying suspend-frame command.
-(defun open-shell()
+(defun open-shell ()
   "Create a shell with a given name"
   (interactive);; "Prompt\n shell name:")
   (let ((shell-name (read-string "Shell name: " nil)))
@@ -70,7 +70,7 @@
 (global-set-key (kbd "C-c M-e") 'open-in-explorer)
 
 ;; Binding for launching the default browser when editing a HTML buffer.
-(defun open-in-browser()
+(defun open-in-browser ()
   (interactive)
   (let ((filename (buffer-file-name)))
     (browse-url (concat "file://" filename))))
