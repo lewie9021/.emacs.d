@@ -15,6 +15,7 @@
 ;; web-mode - Autonomous mode for editing web templates.
 ;; emmet-mode - CSS-style markup constructor.
 ;; smex - M-x enhancement (similar to how ido-mode works).
+;; browse-kill-ring - List recently killed text.
 ;; undo-tree - Provides functionality for recovering any past state of a buffer.
 ;; auto-complete - An intelligent auto-completion extension with #popup menu.
 ;; indent-guide - Show vertical lines to guide indentation.
@@ -29,6 +30,7 @@
              web-mode
              emmet-mode
              smex
+             browse-kill-ring
              undo-tree
              auto-complete
              indent-guide
