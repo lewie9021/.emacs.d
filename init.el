@@ -73,10 +73,6 @@
 ;; Use the Brogrammer inspired theme.
 (load-file "~/.emacs.d/themes/brogrammer.el")
 
-;; Load manual packages.
-(dolist (f '("indent-guide"))
-  (load-file (concat "~/.emacs.d/packages/" f ".el")))
-
 ;; Load partial configuration files.
 (dolist (f '("backups" "recent-files" "bindings" "misc"))
   (load-file (concat "~/.emacs.d/elisp/" f ".el")))

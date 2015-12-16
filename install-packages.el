@@ -17,6 +17,7 @@
 ;; smex - M-x enhancement (similar to how ido-mode works).
 ;; undo-tree - Provides functionality for recovering any past state of a buffer.
 ;; auto-complete - An intelligent auto-completion extension with #popup menu.
+;; indent-guide - Show vertical lines to guide indentation.
 ;; idle-highlight-mode - Sets an idle timer that highlights all occurences in the buffer of the word under the point.
 
 (dolist (p '(coffee-mode
@@ -30,6 +31,7 @@
              smex
              undo-tree
              auto-complete
+             indent-guide
              idle-highlight-mode)
 )(package-install p))
 
