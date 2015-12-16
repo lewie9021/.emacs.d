@@ -42,6 +42,5 @@
 ;; rainbow-mode - Colorize color names in the buffer.
 
 (dolist (p '(nyan-mode
-             annoying-arrows-mode
 	     rainbow-mode)
 )(package-install p))

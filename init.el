@@ -3,6 +3,9 @@
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
+;; Use the Brogrammer inspired theme.
+(load-file "~/.emacs.d/themes/brogrammer.el")
+
 ;; Identify yourself.
 (setq user-full-name "Lewis Barnes")
 
@@ -70,9 +73,6 @@
 (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
 (setq ispell-program-name "aspell")
 
-;; Use the Brogrammer inspired theme.
-(load-file "~/.emacs.d/themes/brogrammer.el")
-
 ;; Load partial configuration files.
 (dolist (f '("backups" "recent-files" "bindings" "misc"))
   (load-file (concat "~/.emacs.d/elisp/" f ".el")))
@@ -92,9 +92,6 @@
 ;; Use default auto-complete configuration.
 (ac-config-default)
 
-;; Set the trigger key so that it can work together with yasnippet on tab key,
-;; if the word exists in yasnippet, pressing tab will cause yasnippet to
-;; activate, otherwise, auto-complete will.
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
 
@@ -109,10 +106,8 @@
 ;; Enable recent files mode.
 (recentf-mode t)
 
-; Track only up to 15 files.
+;; Track only up to 15 files.
 (setq recentf-max-saved-items 15)
-
-(global-annoying-arrows-mode)
 
 (set-default 'truncate-lines t)
 
