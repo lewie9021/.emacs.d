@@ -28,17 +28,17 @@
 ;; The default desktop is saved always
 (setq desktop-save t)
 
-;; The default desktop is loaded anyway if it is locked
+;; The default desktop is loaded anyway if it is locked.
 (setq desktop-load-locked-desktop t)
 
 ;; Hide welcome screen.
 (setq inhibit-startup-screen t)
 
-;; Prevent tabs when formating a region
+;; Don't use tabs when formatting a region.
 (setq indent-tabs-mode nil)
 (setq-default indent-tabs-mode nil)
 
-;; Prevents new buffers when in Dired.
+;; Don't create new buffers when in Dired.
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;; Save the state of Emacs from one session to another.
@@ -61,10 +61,6 @@
 
 ;; Inserts matching delimiters and places pointer within.
 (electric-pair-mode t)
-
-;; Display a vertical line through column 120.
-(set-default 'fill-column 120)
-(setq fci-rule-width 1)
 
 ;; Override standard undo system with undo-tree
 (global-undo-tree-mode)
